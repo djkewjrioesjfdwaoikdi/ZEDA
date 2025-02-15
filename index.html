@@ -29,12 +29,20 @@
         }
     </style>
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.innerHTML = "<div class='message'><h2>Preusmjeravanje...</h2></div>";
+        });
+        
         if (navigator.userAgent.includes("Instagram") || navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV")) {
             document.addEventListener("DOMContentLoaded", function() {
-                document.body.innerHTML = "<div class='message'><h2>Posjetite stranicu preko browsera</h2><p>🔝 Dodirnite gornji desni ugao i odaberite 'Otvori u pregledniku'.</p></div>";
+                setTimeout(() => {
+                    document.body.innerHTML = "<div class='message'><h2>Posjetite stranicu preko browsera</h2><p>Dodirnite gornji desni ugao i odaberite 'Otvori u pregledniku'.</p></div>";
+                }, 1000);
             });
         } else {
-            window.location.href = "https://linktr.ee/zeda.zdravlje";
+            setTimeout(() => {
+                window.location.href = "https://linktr.ee/zeda.zdravlje";
+            }, 1000);
         }
     </script>
 </head>
