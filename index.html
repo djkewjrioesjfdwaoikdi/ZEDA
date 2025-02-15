@@ -19,6 +19,8 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
         }
         h2 {
             color: #333;
@@ -44,11 +46,11 @@
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Check if user is in Instagram's in-app browser
             if (navigator.userAgent.includes("Instagram") || navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV")) {
-                document.body.innerHTML = "<div class='message'><h2>Posjetite stranicu preko preglednika</h2><p>Dodirnite gornji desni ugao i odaberite 'Otvori u pregledniku'</p><a class='button' href='https://ig.me/m/zeda.zdravlje' target='_blank'>Otvori na Instagramu</a></div>";
+                // User is in Instagram's browser
+                document.body.innerHTML = "<div class='message'><h2>Posjetite stranicu preko preglednika</h2><p>Dodirnite gornji desni ugao i odaberite 'Otvori u pregledniku'</p></div>";
             } else {
-                // For all other browsers, show just the button
+                // For all other browsers, show the centered button
                 document.body.innerHTML = "<div class='message'><a class='button' href='https://ig.me/m/zeda.zdravlje' target='_blank'>Otvori na Instagramu</a></div>";
             }
         });
