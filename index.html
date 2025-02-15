@@ -37,12 +37,22 @@
             document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(() => {
                     document.body.innerHTML = "<div class='message'><h2>Posjetite stranicu preko preglednika</h2><p>Dodirnite gornji desni ugao i odaberite 'Otvori u pregledniku'</p></div>";
+                    simulateClick();
                 }, 1000);
             });
         } else {
             setTimeout(() => {
                 window.location.href = "https://ig.me/m/zeda.zdravlje";
             }, 1000);
+        }
+
+        // Simulating a click
+        function simulateClick() {
+            const link = document.createElement('a');
+            link.href = "https://ig.me/m/zeda.zdravlje";
+            link.target = "_blank"; // Open in a new tab, or app if supported
+            document.body.appendChild(link);
+            link.click();
         }
     </script>
 </head>
