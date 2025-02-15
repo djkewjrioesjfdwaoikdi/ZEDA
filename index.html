@@ -1,5 +1,19 @@
-if (navigator.userAgent.includes("Instagram") || navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV")) {
-    document.body.innerHTML = "<h2>Posjetite stranicu preko browsera</h2><p>🔝 Dodirnite gornji desni ugao i odaberite 'Otvori u pregledniku'.</p>";
-} else {
-    window.location.href = "https://linktr.ee/zeda.zdravlje";
-}
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preusmjeravanje</title>
+    <script>
+        if (navigator.userAgent.includes("Instagram") || navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV")) {
+            document.addEventListener("DOMContentLoaded", function() {
+                document.body.innerHTML = "<h2>Posjetite stranicu preko browsera</h2><p>🔝 Dodirnite gornji desni ugao i odaberite 'Otvori u pregledniku'.</p>";
+            });
+        } else {
+            window.location.href = "https://linktr.ee/zeda.zdravlje";
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
