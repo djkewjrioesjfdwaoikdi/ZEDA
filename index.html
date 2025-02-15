@@ -4,10 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Preusmjeravanje</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .message {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
     <script>
         if (navigator.userAgent.includes("Instagram") || navigator.userAgent.includes("FBAN") || navigator.userAgent.includes("FBAV")) {
             document.addEventListener("DOMContentLoaded", function() {
-                document.body.innerHTML = "<h2>Posjetite stranicu preko browsera</h2><p>🔝 Dodirnite gornji desni ugao i odaberite 'Otvori u pregledniku'.</p>";
+                document.body.innerHTML = "<div class='message'><h2>Posjetite stranicu preko browsera</h2><p>🔝 Dodirnite gornji desni ugao i odaberite 'Otvori u pregledniku'.</p></div>";
             });
         } else {
             window.location.href = "https://linktr.ee/zeda.zdravlje";
